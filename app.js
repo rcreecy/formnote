@@ -18,6 +18,7 @@ app.listen(port, () => {
 
 var nameSchema = new mongoose.Schema({
  srNumber: String,
+ summary: String,
  notePad: String
 });
 
