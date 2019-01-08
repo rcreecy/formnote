@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(30, 36, 55);
+  background-color: rgb(33, 35, 43);
 }
 
 /*!
@@ -131,7 +131,22 @@ body {
   padding: 20px;
 }
 
+.nav-link-button {
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  padding-left: 8px;
+}
+
 .nav-link:hover {
   background-color: rgb(190, 52, 33);
   background-size: cover;
+  transition: 0.8s;
+  border-radius: 5px;
+}
+
+.navbar-text {
+  text-align: right;
 }
