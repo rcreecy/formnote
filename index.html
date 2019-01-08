@@ -5,6 +5,8 @@
      <!-- Bootstrap core CSS -->
      <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
      <link rel="stylesheet" href="css/master.css">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
    </head>
 
    <body>
@@ -42,18 +44,23 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                       <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="#menu-toggle" id="menu-toggle">Notes</a>
-                        <a class="nav-item nav-link" href="#">Features</a>
-                        <a class="nav-item nav-link" href="#">Pricing</a>
+                        <a class="nav-item nav-link" href="#menu-toggle" id="menu-toggle"><i class="fa fa-list fa-lg"></i></a>
+                        <a class="nav-item nav-link" href="#" type="submit"><i class="fa fa-save fa-lg"></i></a>
+                        <a class="nav-item nav-link" href="#"><i class="fa fa-plus fa-lg"></i></a>
                       </div>
                     </div>
                   </nav>
-               <h1>Form Note <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a><input class="btn btn-primary" type="submit" value="Save"></h1>
+            <div class="inner-container">
+              <form id="newNote">
+                <div class="form-group">
+                  <input type="text" class="form-control" name="srNumber" placeholder="Subject">
+                </div>
 
-
-               <input type="text" name="srNumber" placeholder="SR#" required>
-               <input type="text" name="notePad" placeholder="Enter your notes" required>
+                <div class="form-group">
+                  <textarea class="form-control" name="notePad" rows="30"></textarea>
+                </div>
               </form>
+            </div>
              </div>
          </div>
          <!-- /#page-content-wrapper -->

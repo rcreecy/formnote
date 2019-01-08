@@ -46,6 +46,7 @@ body {
 #page-content-wrapper {
   width: 100%;
   position: absolute;
+  padding-right: 0px;
 
 }
 
@@ -123,4 +124,14 @@ body {
     position: relative;
     margin-right: 0;
   }
+}
+
+
+.inner-container {
+  padding: 20px;
+}
+
+.nav-link:hover {
+  background-color: rgb(190, 52, 33);
+  background-size: cover;
 }
