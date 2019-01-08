@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <title>Form Note</title>
+     <!-- Bootstrap core CSS -->
+     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+     <link rel="stylesheet" href="css/master.css">
+   </head>
+
+   <body>
+
+     <div id="wrapper" class="toggled">
+         <!-- Sidebar -->
+         <div id="sidebar-wrapper">
+             <ul class="sidebar-nav">
+                 <li>
+                     <a href="#">Notes</a>
+                 </li>
+                 <li>
+                     <a href="#">Compose</a>
+                 </li>
+                 <li>
+                     <a href="#">Open Notes</a>
+                 </li>
+                 <li>
+                     <a href="#">Closed Notes</a>
+                 </li>
+                 <li>
+                     <a href="#">Trash</a>
+                 </li>
+             </ul>
+         </div>
+         <!-- /#sidebar-wrapper -->
+
+         <!-- Page Content -->
+         <div id="page-content-wrapper">
+             <div class="container-fluid">
+               <form method="post" action="/addnote">
+                 <nav class="navbar navbar-expand navbar-dark bg-dark">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                      <div class="navbar-nav">
+                        <a class="nav-item nav-link" href="#menu-toggle" id="menu-toggle">Notes</a>
+                        <a class="nav-item nav-link" href="#">Features</a>
+                        <a class="nav-item nav-link" href="#">Pricing</a>
+                      </div>
+                    </div>
+                  </nav>
+               <h1>Form Note <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a><input class="btn btn-primary" type="submit" value="Save"></h1>
+
+
+               <input type="text" name="srNumber" placeholder="SR#" required>
+               <input type="text" name="notePad" placeholder="Enter your notes" required>
+              </form>
+             </div>
+         </div>
+         <!-- /#page-content-wrapper -->
+
+     </div>
+
+     <!-- Bootstrap core JavaScript -->
+     <script src="vendor/jquery/jquery.min.js"></script>
+     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+     <script src="main.js"></script>
+
+   </body>
+</html>
