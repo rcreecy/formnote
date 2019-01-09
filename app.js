@@ -1,19 +1,29 @@
+
+
 var express = require('express');
 var app = express();
 app.get('/', function(req, res) {
 res.sendFile(__dirname + '/index.html');});
 app.use(express.static(__dirname + '/'));
 var port = 3000;
-
+var mongoose = require('mongoose')
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-var mongoose = require('mongoose');
-global.Promise = mongoose.Promise
-console.log(console.log(mongoose.connection.readyState));
+;
+// global.Promise = mongoose.Promise
+// console.log(console.log(mongoose.connection.readyState));
+//
+// mongoose.connect("mongodb://localhost:27017/formnote");
 
-mongoose.connect("mongodb://localhost:27017/formnote");
+mongoose.connect('mongodb://localhost:27017/formnote',{useNewUrlParser:true})
+    .then(function(){
+        console.log('mongoDB connected');
+    })
+    .catch(function(){
+        console.log('Error :');
+    });
 
 var nameSchema = new mongoose.Schema({
  srNumber: String,
@@ -42,6 +52,8 @@ app.post("/addnote", (req, res) => {
 app.listen(port, () => {
     console.log("Server listening on port " + port);
 });
+
+
 
 // var nameSchema = new mongoose.Schema({
 //  srNumber: String,
