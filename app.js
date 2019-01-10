@@ -11,9 +11,13 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 // define a simple route
-app.get('/', function(req, res) {
-res.sendFile(__dirname + '/index.html');});
-app.use(express.static(__dirname + '/'));
+// app.get('/', function(req, res) {
+// res.sendFile(__dirname + '/index.html');});
+// app.use(express.static(__dirname + '/'));
+
+app.get('/', (req, res) => {
+    res.json({"message": "Welcome to EasyNotes application. Take notes quickly. Organize and keep track of all your notes."});
+});
 
 // Require Notes routes
 require('./app/routes/note.routes.js')(app);
