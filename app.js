@@ -16,7 +16,7 @@ app.use(bodyParser.json())
 // app.use(express.static(__dirname + '/'));
 
 app.get('/', (req, res) => {
-    res.json({"message": "Welcome to EasyNotes application. Take notes quickly. Organize and keep track of all your notes."});
+    res.json({"message": "Welcome to FormNotes. Take notes quickly. Organize and keep track of all your notes."});
 });
 
 // Require Notes routes
